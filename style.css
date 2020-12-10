@@ -1,84 +1,206 @@
-/*
-Each of these CSS elements is associated with an HTML Element, Class, or ID.
-Flip between this CSS file and the HTML to see how things line up.
-Experiment with deleting lines of code from the CSS to see how it affects the web page when you refresh in the browser.
-*/
-
 body {
-    /* Box-model */
-    padding: 0;
-  
-    /* Positioning */
-    margin: 0;
-    font-family: Georgia, "Times New Roman", Times, serif;
-  
-    /* Typography */
-    font-size: 18px;
-    line-height: 150%;
-    color: #333;
-  
-    /* Visual */
-    background: #efeee7;
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.8;
+  color: #303030;
+  background-color: #3030303f;
+}
+
+h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #303030;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+h4 {
+  font-size: 19px;
+  line-height: 1.375em;
+  color: #303030;
+  font-weight: 400;
+  margin-bottom: 30px;
+}  
+.jumbotron {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  background-color: #799e8ac0;
+  color: #fff;
+  padding: 100px 70px;
+  font-family: 'Raleway', sans-serif;
+
+}
+
+.emilyimage {
+  padding: 60px;
+  margin: 20px;
+}
+
+.subtext {
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-style: italic;
+
+}
+
+.container-fluid {
+  padding: 60px 50px;
+}
+.bg-grey {
+  background-color: #799e8ac0;
+}
+.logo-small {
+  color: #818181;
+  font-size: 50px;
+}
+.logo {
+  color: #818181;
+  font-size: 200px;
+}
+.thumbnail {
+  padding: 0 0 15px 0;
+  border: none;
+  border-radius: 0;
+}
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10px;
+}
+.item h4 {
+  font-size: 19px;
+  line-height: 1.375em;
+  font-weight: 400;
+  font-style: italic;
+  margin: 70px 0;
+}
+.item span {
+  font-style: normal;
+}
+.panel {
+  border: 1px solid #818181; 
+  border-radius:0 !important;
+  transition: box-shadow 0.5s;
+}
+.panel:hover {
+  box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+}
+.panel-footer .btn:hover {
+  border: 1px solid #818181;
+  background-color: #799e8ac0 !important;
+  color: #818181;
+}
+.panel-heading {
+  color: #fff !important;
+  background-color: #818181 !important;
+  padding: 25px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.panel-footer {
+  background-color: #799e8ac0 !important;
+}
+.panel-footer h3 {
+  font-size: 32px;
+}
+.panel-footer h4 {
+  color: #fff;
+  font-size: 14px;
+}
+.panel-footer .btn {
+  margin: 15px 0;
+  background-color: #799e8ac0;
+  color: #fff;
+}
+.navbar {
+  margin-bottom: 0;
+  background-color: #818181;
+  z-index: 9999;
+  border: 0;
+  font-size: 12px !important;
+  line-height: 1.42857143 !important;
+  letter-spacing: 4px;
+  border-radius: 0;
+  font-family: 'Raleway', sans-serif;
+}
+.navbar li a, .navbar .navbar-brand {
+  color: #fff !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+  color: #818181 !important;
+  background-color: #fff !important;
+}
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+  color: #fff !important;
+}
+
+.slideanim {visibility:hidden;}
+.slide {
+  animation-name: slide;
+  -webkit-animation-name: slide;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  visibility: visible;
+}
+
+a:link {
+  color: #303030;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #303030;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #3030303f;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #303030;
+  background-color: transparent;
+  text-decoration: underline;
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  } 
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
   }
-  
-  header {
-    background: #d21034;
+}
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%);
+  } 
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
   }
-  
-  h1 {
-    /* Box-model */
-    padding: 20px 0;
-  
-    /* Positioning */
-    margin: 0;
-    margin-bottom: 20px;
-    font-size: 28px;
-  
-    /* Typography */
-    color: #eee;
+}
+@media screen and (max-width: 768px) {
+  .col-sm-4 {
     text-align: center;
-  
-    /* Visual */
-    background: #333;
+    margin: 25px 0;
   }
-  
-  h2 {
-    font-size: 24px;
+  .btn-lg {
+    width: 100%;
+    margin-bottom: 35px;
   }
-  
-  a {
-    color: #d21034;
+}
+@media screen and (max-width: 480px) {
+  .logo {
+    font-size: 150px;
   }
-  
-  .container {
-    /* Box-model */
-    width: 1024px;
-  
-    /* Positioning */
-    margin: 0 auto;
-  }
-  
-  #main-bio,
-  #contact-info,
-  #bio-image {
-    float: left;
-  }
-  
-  #main-bio {
-    width: 70%;
-  }
-  
-  #contact-info {
-    width: 30%;
-  }
-  
-  #bio-image {
-    /* Box-model */
-    width: 200px;
-    height: 200px;
-  
-    /* Positioning */
-  
-    margin-right: 20px;
-  }
-  
+}
