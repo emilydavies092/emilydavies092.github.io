@@ -125,6 +125,11 @@ h4 {
   border-radius: 0;
   font-family: 'Raleway', sans-serif;
 }
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
 .navbar li a, .navbar .navbar-brand {
   color: #fff !important;
 }
